@@ -15,3 +15,8 @@ export type Fighter = Character & {
   skill: number;
   phrase: "Primero pego y luego pregunto";
 };
+
+export type Adviser = Character & {
+  heAdvise: King | Fighter;
+  phrase: "No sé por qué, pero creo que voy a morir pronto";
+};
