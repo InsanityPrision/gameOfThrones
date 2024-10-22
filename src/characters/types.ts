@@ -4,3 +4,8 @@ export type Character = {
   age: number;
   isAlive: boolean;
 };
+
+export type King = Character & {
+  yearsOfReign: number;
+  prhase: "Vais a morir todos";
+};
