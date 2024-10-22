@@ -7,5 +7,11 @@ export type Character = {
 
 export type King = Character & {
   yearsOfReign: number;
-  prhase: "Vais a morir todos";
+  phrase: "Vais a morir todos";
+};
+
+export type Fighter = Character & {
+  weapon: string;
+  skill: number;
+  phrase: "Primero pego y luego pregunto";
 };
