@@ -1,7 +1,11 @@
-export type Character = {
+export type CharacterData = {
   name: string;
-  surname: string;
+  surname?: string;
   age: number;
+};
+
+export type Character = CharacterData & {
   isAlive: boolean;
-  die: (isAlvie: boolean | undefined) => boolean | undefined;
+  die: () => void;
+  talk: () => string;
 };
