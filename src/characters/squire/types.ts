@@ -5,5 +5,5 @@ export type Squire = Character & {
   boss: Fighter;
   toady: number;
   phrase: "Soy un loser";
-  talk: (phrase: string) => string;
+  talk: () => string;
 };
