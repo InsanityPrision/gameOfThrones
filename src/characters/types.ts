@@ -17,6 +17,12 @@ export type Fighter = Character & {
 };
 
 export type Adviser = Character & {
-  heAdvise: King | Fighter;
+  heAdvise: King | Fighter | Squire;
   phrase: "No sé por qué, pero creo que voy a morir pronto";
+};
+
+export type Squire = Character & {
+  heServe: Fighter;
+  astute: number;
+  phrase: "Soy un loser";
 };
