@@ -5,4 +5,5 @@ export type Squire = Character & {
   heServe: Fighter;
   astute: number;
   phrase: "Soy un loser";
+  talk: (phrase: string) => string;
 };

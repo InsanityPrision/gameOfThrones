@@ -6,4 +6,5 @@ import { type Character } from "../types";
 export type Adviser = Character & {
   heAdvise: King | Fighter | Squire;
   phrase: "No sé por qué, pero creo que voy a morir pronto";
+  talk: (phrase: string) => string;
 };
