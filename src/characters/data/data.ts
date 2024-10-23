@@ -80,7 +80,7 @@ const bronn: Squire = {
   age: 32,
   isAlive: true,
   boss: jaime,
-  astute: 6,
+  toady: 6,
   phrase: "Soy un loser",
   die(isAlive) {
     if (isAlive) {
