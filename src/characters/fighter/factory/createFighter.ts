@@ -1,5 +1,5 @@
 import type { CharacterData } from "../../types";
-import type { Fighter, SkillLevel } from "../fighter";
+import type { Fighter, SkillLevel } from "../types";
 
 const createFighter = (
   characterData: CharacterData,
