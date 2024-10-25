@@ -1,4 +1,4 @@
-import { type Fighter } from "../fighter/fighter";
+import { type Fighter } from "../fighter/types";
 import { type Character } from "../types";
 
 export type Squire = Character & {
