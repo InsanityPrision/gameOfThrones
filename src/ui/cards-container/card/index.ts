@@ -4,6 +4,10 @@ const createCardImage = (character: Character): HTMLImageElement => {
   const cardImage = document.createElement("img");
   cardImage.classList.add("card__image");
 
+  if (!character.isAlive) {
+    cardImage.classList.add("card__image--dead");
+  }
+
   cardImage.src = character.imageUrl;
   cardImage.alt = `Face of ${character.name}`;
   cardImage.width = 100;

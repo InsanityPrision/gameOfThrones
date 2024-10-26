@@ -68,6 +68,10 @@ ul {
   border-top-right-radius: 5px;
 }
 
+.card__image--dead {
+  rotate: 180deg;
+}
+
 .card__contetn {
   display: flex;
   flex-direction: column;
