@@ -4,7 +4,12 @@ import createSquire from "./createSquire";
 
 describe("Given the createSquire function", () => {
   describe("When it's called", () => {
-    const squireData = { name: "Pedro", surname: "Perez", age: 34 };
+    const squireData = {
+      name: "Pedro",
+      surname: "Perez",
+      age: 34,
+      imageUrl: "",
+    };
     const squirePhrase = "Soy un loser";
     const boss = jaime;
     const toadyLevel = 9;

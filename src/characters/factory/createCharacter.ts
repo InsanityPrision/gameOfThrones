@@ -1,7 +1,7 @@
 import { type Character, type CharacterData } from "../types";
 
 export const createCharacter = (
-  { name, surname, age }: CharacterData,
+  { name, surname, age, imageUrl }: CharacterData,
   phrase: string,
 ): Character => {
   const newCharacter: Character = {
@@ -9,6 +9,7 @@ export const createCharacter = (
     surname,
     age,
     isAlive: true,
+    imageUrl,
     die() {
       this.isAlive = false;
     },

@@ -1,7 +1,12 @@
 import createKing from "../factory/createKing.js";
 import { type King } from "../types";
 
-const joffreyData = { name: "Joffrey", surname: "Baratheon", age: 12 };
+const joffreyData = {
+  name: "Joffrey",
+  surname: "Baratheon",
+  age: 12,
+  imageUrl: "images/joffrey.webp",
+};
 const kingPhrase = "Vais a morir todos";
 const joffreyYearsOfReign = 1;
 
