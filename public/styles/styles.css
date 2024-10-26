@@ -53,6 +53,21 @@ ul {
   color: #fff;
   width: max-content;
   border-radius: 4px;
-  padding: 5px;
   box-shadow: 2px 2px 2px #000;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+}
+
+.card__image {
+  width: 160px;
+  height: 110px;
+  object-fit: cover;
+  object-position: top;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.card__contetn {
+  padding: 5px;
 }

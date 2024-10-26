@@ -8,6 +8,7 @@ describe("Given the createAdviser function", () => {
       name: "Arthur",
       surname: "Smith",
       age: 56,
+      imageUrl: "",
     };
     const adviserPhrase = "No sé por qué, pero creo que voy a morir pronto";
     const advised = jaime;

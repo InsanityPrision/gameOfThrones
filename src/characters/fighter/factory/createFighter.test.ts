@@ -7,6 +7,7 @@ describe("Given the createFighter function", () => {
       name: "Alex",
       surname: "Perez",
       age: 24,
+      imageUrl: "",
     };
     const phrase = "Primero pego y luego pregunto";
     const skillLevel = 5;

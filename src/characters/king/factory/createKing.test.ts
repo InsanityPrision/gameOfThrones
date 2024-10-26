@@ -3,7 +3,12 @@ import createKing from "./createKing";
 
 describe("Given the createKing function", () => {
   describe("When it's called", () => {
-    const kingData = { name: "Isabel", surname: "Alexandra", age: 96 };
+    const kingData = {
+      name: "Isabel",
+      surname: "Alexandra",
+      age: 96,
+      imageUrl: "",
+    };
     const kingPhrase = "Vais a morir todos";
     const yearsOfReign = 70;
 

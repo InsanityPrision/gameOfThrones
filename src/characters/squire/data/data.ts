@@ -2,7 +2,7 @@ import { jaime } from "../../fighter/data/data.js";
 import createSquire from "../factory/createSquire.js";
 import { type Squire } from "../types";
 
-const bronnData = { name: "Bronn", age: 34 };
+const bronnData = { name: "Bronn", age: 34, imageUrl: "images/bronn.webp" };
 const squirePhrase = "Soy un loser";
 const bronnBoss = jaime;
 const bronnToadyLevel = 6;
