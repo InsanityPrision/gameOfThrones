@@ -14,18 +14,35 @@ body {
   position: relative;
 }
 
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--main-color);
+  height: 100vh;
+}
+
 .main-header {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background-color: var(--main-color);
   color: #fff;
   font-size: 1.5rem;
   font-weight: 600;
 }
 
-.cards-container {
+.cards {
   margin: 0 auto;
-  background-color: var(--main-color);
+  display: grid;
+  grid-template-columns: max-content;
+}
+
+.card {
+  background-color: #331c0e;
+  color: #fff;
+  width: 150px;
+  border-radius: 4px;
+  padding: 5px;
+  box-shadow: 2px 2px 2px #000;
 }
