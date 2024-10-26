@@ -60,10 +60,14 @@ ul {
 }
 
 .card__image {
-  width: 150px;
-  height: 100px;
+  width: 160px;
+  height: 110px;
   object-fit: cover;
   object-position: top;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+}
+
+.card__contetn {
+  padding: 5px;
 }
