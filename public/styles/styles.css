@@ -69,5 +69,12 @@ ul {
 }
 
 .card__contetn {
+  display: flex;
+  flex-direction: column-reverse;
   padding: 5px;
+  gap: 10px;
+}
+
+.card__age {
+  font-size: 0.625rem;
 }
