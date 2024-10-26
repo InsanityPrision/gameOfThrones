@@ -10,14 +10,18 @@ const createCard = (character: Character): HTMLLIElement => {
   cardImage.alt = `Cara de ${character.name}`;
   cardImage.width = 100;
 
+  const cardInformation = document.createElement("div");
+  cardInformation.classList.add("card__contetn");
+
   if (character.surname) {
-    card.textContent = character.name + " " + character.surname;
+    cardInformation.textContent = character.name + " " + character.surname;
   } else {
-    card.textContent = character.name;
+    cardInformation.textContent = character.name;
   }
 
-  card.appendChild(cardImage);
+  card.appendChild(cardInformation);
 
+  card.appendChild(cardImage);
   return card;
 };
 
