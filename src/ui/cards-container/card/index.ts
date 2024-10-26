@@ -16,19 +16,27 @@ const createCardImage = (character: Character): HTMLImageElement => {
 };
 
 const createCharacterState = (character: Character): HTMLElement => {
-  const characterState = document.createElement("div");
+  const characterInfo = document.createElement("div");
+  characterInfo.classList.add("card__information");
 
   if (character.isAlive) {
+    const characterState = document.createElement("span");
     characterState.innerHTML =
       "<span class='card__state'>State: <img class='state--alive' src='icons/up.svg' alt'alive' width='8px' high='8px'></span>";
+    characterInfo.appendChild(characterState);
   }
 
   if (!character.isAlive) {
+    const characterState = document.createElement("span");
     characterState.innerHTML =
-      "<span class='card__state'>State: <img class='state--dead' src='icons/down.svg' alt'alive' width='8px' high='8px'></span>";
+      "<span class='card__state'>State: <img class='state--dead' src='icons/down.svg' alt'alive' width='8px' high='8px'>";
+    characterInfo.appendChild(characterState);
   }
 
-  return characterState;
+  const characterType = document.createElement("span");
+  characterType.classList.add("character-type");
+
+  return characterInfo;
 };
 
 const createCardInformation = (character: Character): HTMLElement => {
