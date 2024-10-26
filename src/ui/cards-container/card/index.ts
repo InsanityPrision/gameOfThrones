@@ -1,7 +1,7 @@
 import { type Character } from "../../../characters/types";
 
-const createCard = (character: Character): HTMLElement => {
-  const card = document.createElement("div");
+const createCard = (character: Character): HTMLLIElement => {
+  const card = document.createElement("li");
   card.classList.add("card");
 
   if (character.surname) {
