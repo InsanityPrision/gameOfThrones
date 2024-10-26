@@ -1,5 +1,5 @@
-import { daenerys } from "../../fighter/data/data";
-import { createAdviser } from "../factory/createAdviser";
+import { daenerys } from "../../fighter/data/data.js";
+import { createAdviser } from "../factory/createAdviser.js";
 import { type Adviser } from "../types";
 
 const tyrionData = { name: "Tyrion", surname: "Lannister", age: 27 };

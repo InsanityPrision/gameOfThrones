@@ -1,4 +1,4 @@
-import createKing from "../factory/createKing";
+import createKing from "../factory/createKing.js";
 import { type King } from "../types";
 
 const joffreyData = { name: "Joffrey", surname: "Baratheon", age: 12 };

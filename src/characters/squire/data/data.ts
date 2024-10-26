@@ -1,5 +1,5 @@
-import { jaime } from "../../fighter/data/data";
-import createSquire from "../factory/createSquire";
+import { jaime } from "../../fighter/data/data.js";
+import createSquire from "../factory/createSquire.js";
 import { type Squire } from "../types";
 
 const bronnData = { name: "Bronn", age: 34 };
