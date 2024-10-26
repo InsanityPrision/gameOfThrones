@@ -55,7 +55,7 @@ ul {
   border-radius: 4px;
   box-shadow: 2px 2px 2px #000;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   gap: 10px;
 }
 
@@ -70,11 +70,28 @@ ul {
 
 .card__contetn {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   padding: 5px;
   gap: 10px;
 }
 
 .card__age {
   font-size: 0.625rem;
+}
+
+.card__state {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.625rem;
+}
+
+.state--alive {
+  width: 12px;
+  height: 12px;
+}
+
+.state--dead {
+  width: 12px;
+  height: 12px;
 }
