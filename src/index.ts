@@ -1,3 +1,4 @@
+import createCardsContainer from "./ui/cards-container/index.js";
 import createMainHeader from "./ui/header/index.js";
 
 const mainContainer = document.querySelector("div");
@@ -7,3 +8,4 @@ if (!mainContainer) {
 }
 
 mainContainer.appendChild(createMainHeader());
+mainContainer.appendChild(createCardsContainer());
