@@ -4,7 +4,5 @@ import { type Squire } from "../squire/types";
 import { type Character } from "../types";
 
 export type Adviser = Character & {
-  advised: King | Fighter | Squire;
-  phrase: "No sé por qué, pero creo que voy a morir pronto";
-  talk: () => string;
+  advised: King | Fighter | Squire | Adviser;
 };
