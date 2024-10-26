@@ -1,11 +1,10 @@
-import { jaime } from "../../characters/fighter/data/data.js";
-import createCard from "./card/index.js";
+import { createCardsList } from "./cards/index.js";
 
 const createCardsContainer = (): HTMLElement => {
   const cardsContainer = document.createElement("main");
-  cardsContainer.classList.add("cards");
+  cardsContainer.classList.add("main-container");
 
-  cardsContainer.appendChild(createCard(jaime));
+  cardsContainer.appendChild(createCardsList());
 
   return cardsContainer;
 };
