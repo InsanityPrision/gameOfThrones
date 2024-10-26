@@ -5,6 +5,9 @@ const jestConfig: JestConfigWithTsJest = {
   verbose: true,
   rootDir: "src",
   ...defaultPreset,
+  moduleNameMapper: {
+    "^(\\.{1,2}/.*)\\.js$": "$1",
+  },
 };
 
 export default jestConfig;

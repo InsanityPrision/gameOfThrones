@@ -1,4 +1,4 @@
-import createFighter from "../factory/createFighter";
+import createFighter from "../factory/createFighter.js";
 import { type Fighter } from "../types";
 
 const jaimeData = {

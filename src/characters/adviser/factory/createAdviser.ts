@@ -1,4 +1,4 @@
-import { createCharacter } from "../../factory/createCharacter";
+import { createCharacter } from "../../factory/createCharacter.js";
 import { type Fighter } from "../../fighter/types";
 import { type King } from "../../king/types";
 import { type Squire } from "../../squire/types";
