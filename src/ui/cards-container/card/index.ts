@@ -20,21 +20,21 @@ const createCharacterState = (character: Character): HTMLElement => {
   characterInfo.classList.add("card__information");
 
   if (character.isAlive) {
-    const characterState = document.createElement("span");
-    characterState.innerHTML =
-      "<span class='card__state'>State: <img class='state--alive' src='icons/up.svg' alt'alive' width='8px' high='8px'></span>";
-    characterInfo.appendChild(characterState);
+    characterInfo.innerHTML =
+      "<span class='card__state'>State: <img class='state--alive' src='icons/up.svg' alt='alive' width='12' height='12'></span>";
   }
 
   if (!character.isAlive) {
-    const characterState = document.createElement("span");
-    characterState.innerHTML =
-      "<span class='card__state'>State: <img class='state--dead' src='icons/down.svg' alt'alive' width='8px' high='8px'>";
-    characterInfo.appendChild(characterState);
+    characterInfo.innerHTML =
+      "<span class='card__state'>State: <img class='state--dead' src='icons/down.svg' alt='alive' width='12' height='12'>";
   }
 
   const characterType = document.createElement("span");
   characterType.classList.add("character-type");
+
+  characterType.innerHTML = "<span class='character-type'>👑</span>";
+
+  characterInfo.appendChild(characterType);
 
   return characterInfo;
 };
