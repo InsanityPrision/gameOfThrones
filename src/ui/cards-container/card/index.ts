@@ -15,6 +15,34 @@ const createCardImage = (character: Character): HTMLImageElement => {
   return cardImage;
 };
 
+const createCharacterType = (character: Character): HTMLElement => {
+  const characterType = document.createElement("span");
+  characterType.classList.add("character-type");
+
+  const kingPhrase = "Vais a morir todos";
+  const fighterPhrase = "Primero pego y luego pregunto";
+  const adviserPhrase = "No sé por qué, pero creo que voy a morir pronto";
+  const squirePhrase = "Soy un loser";
+
+  if (character.talk() === kingPhrase) {
+    characterType.innerHTML = "<span class='character-type'>👑</span>";
+  }
+
+  if (character.talk() === fighterPhrase) {
+    characterType.innerHTML = "<span class='character-type'>🗡</span>";
+  }
+
+  if (character.talk() === adviserPhrase) {
+    characterType.innerHTML = "<span class='character-type'>🎓</span>";
+  }
+
+  if (character.talk() === squirePhrase) {
+    characterType.innerHTML = "<span class='character-type'>🛡️</span>";
+  }
+
+  return characterType;
+};
+
 const createCharacterState = (character: Character): HTMLElement => {
   const characterInfo = document.createElement("div");
   characterInfo.classList.add("card__information");
@@ -29,12 +57,7 @@ const createCharacterState = (character: Character): HTMLElement => {
       "<span class='card__state'>State: <img class='state--dead' src='icons/down.svg' alt='alive' width='12' height='12'>";
   }
 
-  const characterType = document.createElement("span");
-  characterType.classList.add("character-type");
-
-  characterType.innerHTML = "<span class='character-type'>👑</span>";
-
-  characterInfo.appendChild(characterType);
+  characterInfo.appendChild(createCharacterType(character));
 
   return characterInfo;
 };
