@@ -80,14 +80,14 @@ ul {
 }
 
 .card__age {
-  font-size: 0.625rem;
+  font-size: 0.75rem;
 }
 
-.card__state {
+.card__information {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 5px;
-  font-size: 0.625rem;
+  font-size: 0.75rem;
 }
 
 .state--alive {
