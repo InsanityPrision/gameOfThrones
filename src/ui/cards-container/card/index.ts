@@ -10,8 +10,8 @@ const createCardImage = (character: Character): HTMLImageElement => {
 
   cardImage.src = character.imageUrl;
   cardImage.alt = `Face of ${character.name}`;
-  cardImage.width = 340;
-  cardImage.height = 250;
+  cardImage.width = 280;
+  cardImage.height = 220;
   cardImage.loading = "eager";
 
   return cardImage;
@@ -56,7 +56,7 @@ const createCharacterState = (character: Character): HTMLElement => {
 
   if (!character.isAlive) {
     characterInfo.innerHTML =
-      "<span class='card__state'>State: <img class='state--dead' src='icons/down.svg' alt='alive' width='12' height='12'>";
+      "<span class='card__state'>State: <img class='state--dead' src='icons/down.svg' alt='dead' width='12' height='12'>></span>";
   }
 
   characterInfo.appendChild(createCharacterType(character));
@@ -69,7 +69,7 @@ const createCardInformation = (character: Character): HTMLElement => {
   cardInformation.classList.add("character__content");
 
   cardInformation.innerHTML = `
-  <h2 class="character__name">${character.name} ${character.surname}</h2> `;
+  <h2 class="character__name">${character.name} ${character.surname ? character.surname : ""}</h2> `;
 
   const characterInformation = document.createElement("div");
   characterInformation.classList.add("character__information");
