@@ -4,10 +4,11 @@ const defaultPreset = createDefaultPreset();
 const jestConfig: JestConfigWithTsJest = {
   verbose: true,
   rootDir: "src",
-  ...defaultPreset,
   moduleNameMapper: {
     "^(\\.{1,2}/.*)\\.js$": "$1",
   },
+  testEnvironment: "jsdom",
+  ...defaultPreset,
 };
 
 export default jestConfig;
