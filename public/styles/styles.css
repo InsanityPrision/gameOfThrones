@@ -52,22 +52,17 @@ ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px 30px;
+  max-width: 100%;
 }
 
 .card {
   background-color: #331c0e;
   color: #fff;
-  width: max-content;
   border-radius: 4px;
   box-shadow: 2px 2px 2px #000;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
 }
 
 .card__image {
-  width: 160px;
-  height: 110px;
   object-fit: cover;
   object-position: top;
   border-top-left-radius: 5px;
@@ -78,22 +73,27 @@ ul {
   rotate: 180deg;
 }
 
-.card__contetn {
+.character__content {
   display: flex;
   flex-direction: column;
-  padding: 5px;
+  padding: 10px;
   gap: 10px;
 }
 
-.card__age {
-  font-size: 0.75rem;
+.character__name {
+  margin: 0;
 }
 
-.card__information {
+.character__information {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.character__state {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.75rem;
 }
 
 .state--alive {

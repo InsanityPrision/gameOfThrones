@@ -10,7 +10,9 @@ const createCardImage = (character: Character): HTMLImageElement => {
 
   cardImage.src = character.imageUrl;
   cardImage.alt = `Face of ${character.name}`;
-  cardImage.width = 100;
+  cardImage.width = 340;
+  cardImage.height = 250;
+  cardImage.loading = "eager";
 
   return cardImage;
 };
@@ -25,19 +27,19 @@ const createCharacterType = (character: Character): HTMLElement => {
   const squirePhrase = "Soy un loser";
 
   if (character.talk() === kingPhrase) {
-    characterType.innerHTML = "<span class='character-type'>👑</span>";
+    characterType.textContent = "👑";
   }
 
   if (character.talk() === fighterPhrase) {
-    characterType.innerHTML = "<span class='character-type'>🗡</span>";
+    characterType.textContent = "🗡";
   }
 
   if (character.talk() === adviserPhrase) {
-    characterType.innerHTML = "<span class='character-type'>🎓</span>";
+    characterType.textContent = "🎓";
   }
 
   if (character.talk() === squirePhrase) {
-    characterType.innerHTML = "<span class='character-type'>🛡️</span>";
+    characterType.textContent = "🛡️";
   }
 
   return characterType;
@@ -45,7 +47,7 @@ const createCharacterType = (character: Character): HTMLElement => {
 
 const createCharacterState = (character: Character): HTMLElement => {
   const characterInfo = document.createElement("div");
-  characterInfo.classList.add("card__information");
+  characterInfo.classList.add("character__state");
 
   if (character.isAlive) {
     characterInfo.innerHTML =
@@ -63,25 +65,19 @@ const createCharacterState = (character: Character): HTMLElement => {
 };
 
 const createCardInformation = (character: Character): HTMLElement => {
-  const characterState = createCharacterState(character);
   const cardInformation = document.createElement("div");
-  cardInformation.classList.add("card__contetn");
+  cardInformation.classList.add("character__content");
 
-  const characterName = document.createElement("div");
+  cardInformation.innerHTML = `
+  <h2 class="character__name">${character.name} ${character.surname}</h2> `;
 
-  if (character.surname) {
-    characterName.textContent = character.name + " " + character.surname;
-  } else {
-    characterName.textContent = character.name;
-  }
+  const characterInformation = document.createElement("div");
+  characterInformation.classList.add("character__information");
 
-  const characterAge = document.createElement("span");
-  characterAge.classList.add("card__age");
-  characterAge.textContent = `Age: ${character.age} years`;
+  characterInformation.innerHTML = `<span class="character__age">Age: ${character.age} years</span>`;
 
-  cardInformation.appendChild(characterName);
-  cardInformation.appendChild(characterAge);
-  cardInformation.appendChild(characterState);
+  cardInformation.appendChild(characterInformation);
+  characterInformation.appendChild(createCharacterState(character));
 
   return cardInformation;
 };
