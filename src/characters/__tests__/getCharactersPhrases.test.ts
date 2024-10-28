@@ -12,7 +12,6 @@ describe("Given the getCharactersPhrases", () => {
       ];
 
       const phrases = getCharactersPhrases([jaime, bronn, daenerys]);
-      console.log(phrases);
 
       expect(phrases).toEqual(expectedPhrases);
     });
