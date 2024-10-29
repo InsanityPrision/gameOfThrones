@@ -109,13 +109,3 @@ ul {
   justify-content: space-between;
   align-items: center;
 }
-
-.state--alive {
-  width: 12px;
-  height: 12px;
-}
-
-.state--dead {
-  width: 12px;
-  height: 12px;
-}
