@@ -49,15 +49,12 @@ const createCharacterState = (character: Character): HTMLElement => {
   const characterInfo = document.createElement("div");
   characterInfo.classList.add("character__state");
 
-  if (character.isAlive) {
-    characterInfo.innerHTML =
-      "<span class='card__state'>State: <img class='state--alive' src='icons/up.svg' alt='alive' width='12' height='12'></span>";
-  }
-
-  if (!character.isAlive) {
-    characterInfo.innerHTML =
-      "<span class='card__state'>State: <img class='state--dead' src='icons/down.svg' alt='dead' width='12' height='12'>></span>";
-  }
+  characterInfo.innerHTML = `
+    <span class='card__state'>
+      State: 
+      <img src=icons/${character.isAlive ? "up.svg" : "down.svg"} alt=${character.isAlive ? "alive" : "dead"} width='16' height='16'>
+    </span>
+    `;
 
   characterInfo.appendChild(createCharacterType(character));
 
