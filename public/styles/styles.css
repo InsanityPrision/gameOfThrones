@@ -51,7 +51,7 @@ ul {
   }
 }
 
-.cards {
+.characters {
   max-width: 100%;
   display: flex;
   flex-direction: column;
@@ -70,20 +70,20 @@ ul {
   }
 }
 
-.card {
+.character {
   background-color: #331c0e;
   border-radius: 4px;
   box-shadow: 2px 2px 2px #000;
 }
 
-.card__image {
+.character__image {
   object-fit: cover;
   object-position: top;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
 
-.card__image--dead {
+.character__image--dead {
   rotate: 180deg;
 }
 

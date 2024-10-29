@@ -16,7 +16,7 @@ export const createCards = (characters: Character[]): HTMLLIElement[] => {
 
 export const createCardsList = (): HTMLUListElement => {
   const cardsContainer = document.createElement("ul");
-  cardsContainer.classList.add("cards");
+  cardsContainer.classList.add("characters");
 
   const cards = createCards(characters);
 
