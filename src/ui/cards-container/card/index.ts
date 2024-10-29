@@ -2,10 +2,10 @@ import { type Character } from "../../../characters/types";
 
 const createCardImage = (character: Character): HTMLImageElement => {
   const cardImage = document.createElement("img");
-  cardImage.classList.add("card__image");
+  cardImage.classList.add("character__image");
 
   if (!character.isAlive) {
-    cardImage.classList.add("card__image--dead");
+    cardImage.classList.add("character__image--dead");
   }
 
   cardImage.src = character.imageUrl;
@@ -84,7 +84,7 @@ const createCardInformation = (character: Character): HTMLElement => {
 
 const createCard = (character: Character): HTMLLIElement => {
   const card = document.createElement("li");
-  card.classList.add("card");
+  card.classList.add("character");
 
   const characterImage = createCardImage(character);
   const characterInformation = createCardInformation(character);
