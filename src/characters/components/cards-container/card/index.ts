@@ -90,13 +90,17 @@ const createCard = (
   isLazyLoading?: boolean,
 ): HTMLLIElement => {
   const card = document.createElement("li");
-  card.classList.add("character");
+
+  const characterCard = document.createElement("article");
+  characterCard.classList.add("character");
 
   const characterImage = createCardImage(character, isLazyLoading);
   const characterInformation = createCardInformation(character);
 
-  card.appendChild(characterImage);
-  card.appendChild(characterInformation);
+  characterCard.appendChild(characterImage);
+  characterCard.appendChild(characterInformation);
+
+  card.appendChild(characterCard);
 
   return card;
 };
