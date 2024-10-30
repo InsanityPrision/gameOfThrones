@@ -1,4 +1,4 @@
-import { type Character } from "../../../characters/types";
+import { type Character } from "../../../types";
 
 const createCardImage = (character: Character): HTMLImageElement => {
   const cardImage = document.createElement("img");
