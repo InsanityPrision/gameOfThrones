@@ -1,5 +1,6 @@
-import createCardsContainer from "./ui/cards-container/index.js";
-import createMainHeader from "./ui/header/index.js";
+import createCardsContainer from "./characters/components/cards-container/index.js";
+import { characters } from "./characters/data/data.js";
+import createMainHeader from "./components/header/index.js";
 
 const mainContainer = document.querySelector(".root");
 
@@ -8,4 +9,4 @@ if (!mainContainer) {
 }
 
 mainContainer.appendChild(createMainHeader());
-mainContainer.appendChild(createCardsContainer());
+mainContainer.appendChild(createCardsContainer(characters));
