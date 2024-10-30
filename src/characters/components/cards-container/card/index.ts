@@ -1,6 +1,9 @@
 import { type Character } from "../../../types";
 
-const createCardImage = (character: Character): HTMLImageElement => {
+const createCardImage = (
+  character: Character,
+  isLaizyLoading?: boolean,
+): HTMLImageElement => {
   const cardImage = document.createElement("img");
   cardImage.classList.add("character__image");
 
@@ -12,7 +15,10 @@ const createCardImage = (character: Character): HTMLImageElement => {
   cardImage.alt = `Face of ${character.name}`;
   cardImage.width = 280;
   cardImage.height = 220;
-  cardImage.loading = "eager";
+
+  if (isLaizyLoading) {
+    cardImage.loading = "lazy";
+  }
 
   return cardImage;
 };
@@ -79,11 +85,14 @@ const createCardInformation = (character: Character): HTMLElement => {
   return cardInformation;
 };
 
-const createCard = (character: Character): HTMLLIElement => {
+const createCard = (
+  character: Character,
+  isLazyLoading?: boolean,
+): HTMLLIElement => {
   const card = document.createElement("li");
   card.classList.add("character");
 
-  const characterImage = createCardImage(character);
+  const characterImage = createCardImage(character, isLazyLoading);
   const characterInformation = createCardInformation(character);
 
   card.appendChild(characterImage);

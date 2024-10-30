@@ -4,8 +4,8 @@ import createCard from "../card/index.js";
 export const createCards = (characters: Character[]): HTMLLIElement[] => {
   const cardList: HTMLLIElement[] = [];
 
-  characters.forEach((character) => {
-    const card = createCard(character);
+  characters.forEach((character, position) => {
+    const card = createCard(character, position >= 3);
 
     cardList.push(card);
   });
