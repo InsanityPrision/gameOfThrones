@@ -1,4 +1,4 @@
-import createCardsContainer from "../../characters/components/cards-container/index.js";
+import createCardsContainer from "../../characters/components/cardsContainer/index.js";
 import { characters } from "../../characters/data/data.js";
 import createMainHeader from "../header/index.js";
 
