@@ -1,6 +1,6 @@
-import createCardsContainer from "../../characters/components/cardsContainer/index.js";
-import { characters } from "../../characters/data/data.js";
-import createMainHeader from "../header/index.js";
+import createCardsContainer from "./characters/components/cardsContainer/index.js";
+import { characters } from "./characters/data/data.js";
+import createMainHeader from "./components/header/index.js";
 
 const mainContainer = document.querySelector(".root");
 
