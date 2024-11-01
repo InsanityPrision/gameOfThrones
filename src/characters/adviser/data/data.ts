@@ -1,6 +1,6 @@
 import { daenerys } from "../../fighter/data/data.js";
-import { createAdviser } from "../factory/createAdviser.js";
-import { type Adviser } from "../types";
+import { createAdviser } from "../factory/Adviser.js";
+import { type AdviserStructure } from "../types";
 
 const tyrionData = {
   name: "Tyrion",
@@ -11,6 +11,10 @@ const tyrionData = {
 const adviserPhrase = "No sé por qué, pero creo que voy a morir pronto";
 const tyrionBoss = daenerys;
 
-const tyrion: Adviser = createAdviser(tyrionData, adviserPhrase, tyrionBoss);
+const tyrion: AdviserStructure = createAdviser(
+  tyrionData,
+  adviserPhrase,
+  tyrionBoss,
+);
 
 export default tyrion;
