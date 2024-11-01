@@ -1,5 +1,5 @@
-import createApp from "./app/createApp.js";
 import { characters } from "./characters/data/data.js";
+import createApp from "./components/app/createApp.js";
 
 const rootContainer = document.querySelector(".root");
 
