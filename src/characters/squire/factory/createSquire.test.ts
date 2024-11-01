@@ -1,6 +1,6 @@
 import { jaime } from "../../fighter/data/data";
-import { type Squire } from "../types";
-import createSquire from "./createSquire";
+import { type SquireStrucutre } from "../types";
+import createSquire from "./Squire";
 
 describe("Given the createSquire function", () => {
   describe("When it's called", () => {
@@ -15,7 +15,7 @@ describe("Given the createSquire function", () => {
     const toadyLevel = 9;
 
     test("Then it should return a alive Squire", () => {
-      const squire: Squire = createSquire(
+      const squire: SquireStrucutre = createSquire(
         squireData,
         squirePhrase,
         boss,
