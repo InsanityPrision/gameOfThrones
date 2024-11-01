@@ -1,6 +1,6 @@
-import { type Character } from "./types";
+import { type CharacterStructure } from "./types";
 
-const getCharactersPhrases = (characters: Character[]): string[] => {
+const getCharactersPhrases = (characters: CharacterStructure[]): string[] => {
   const charactersPhrases: string[] = [];
 
   characters.forEach((character) => {

@@ -1,6 +1,5 @@
 import { jaime } from "../../fighter/data/data";
-import { type Squire } from "../types";
-import createSquire from "./createSquire";
+import { Squire } from "./Squire";
 
 describe("Given the createSquire function", () => {
   describe("When it's called", () => {
@@ -10,17 +9,11 @@ describe("Given the createSquire function", () => {
       age: 34,
       imageUrl: "",
     };
-    const squirePhrase = "Soy un loser";
     const boss = jaime;
     const toadyLevel = 9;
 
     test("Then it should return a alive Squire", () => {
-      const squire: Squire = createSquire(
-        squireData,
-        squirePhrase,
-        boss,
-        toadyLevel,
-      );
+      const squire: Squire = new Squire(squireData, boss, toadyLevel);
 
       expect(squire.isAlive).toBeTruthy();
     });
@@ -28,13 +21,13 @@ describe("Given the createSquire function", () => {
     test("Then it should return a squire who says 'Soy un loser'", () => {
       const phrase = "Soy un loser";
 
-      const squire = createSquire(squireData, squirePhrase, boss, toadyLevel);
+      const squire: Squire = new Squire(squireData, boss, toadyLevel);
 
       expect(squire.talk()).toEqual(phrase);
     });
 
     test("Then it should return a squire who can die", () => {
-      const squire = createSquire(squireData, squirePhrase, boss, toadyLevel);
+      const squire: Squire = new Squire(squireData, boss, toadyLevel);
 
       squire.die();
 

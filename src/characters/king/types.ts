@@ -1,5 +1,3 @@
-import { type Character } from "../types";
-
-export type King = Character & {
+export interface KingStructure {
   yearsOfReign: number;
-};
+}

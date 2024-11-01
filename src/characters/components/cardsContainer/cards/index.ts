@@ -1,7 +1,9 @@
-import { type Character } from "../../../types.js";
+import { type CharacterStructure } from "../../../types.js";
 import createCard from "../card/index.js";
 
-export const createCards = (characters: Character[]): HTMLLIElement[] => {
+export const createCards = (
+  characters: CharacterStructure[],
+): HTMLLIElement[] => {
   const cardList: HTMLLIElement[] = [];
 
   characters.forEach((character, position) => {
@@ -13,7 +15,9 @@ export const createCards = (characters: Character[]): HTMLLIElement[] => {
   return cardList;
 };
 
-export const createCardsList = (characters: Character[]): HTMLUListElement => {
+export const createCardsList = (
+  characters: CharacterStructure[],
+): HTMLUListElement => {
   const cardsContainer = document.createElement("ul");
   cardsContainer.classList.add("characters");
 
