@@ -1,6 +1,6 @@
-import createCardsContainer from "../characters/components/cardsContainer/index.js";
-import { type CharacterStructure } from "../characters/types";
-import createMainHeader from "../components/header/index.js";
+import createCardsContainer from "../../characters/components/cardsContainer";
+import { type CharacterStructure } from "../../characters/types";
+import createMainHeader from "../header";
 
 const createApp = (characters: CharacterStructure[]): HTMLElement => {
   const mainContainer = document.createElement("div");
