@@ -1,7 +1,7 @@
-import { type Character } from "../../../types";
+import { type CharacterStructure } from "../../../types";
 
 const createCardImage = (
-  character: Character,
+  character: CharacterStructure,
   isLaizyLoading?: boolean,
 ): HTMLImageElement => {
   const cardImage = document.createElement("img");
@@ -11,8 +11,8 @@ const createCardImage = (
     cardImage.classList.add("character__image--dead");
   }
 
-  cardImage.src = character.imageUrl;
-  cardImage.alt = `Face of ${character.name}`;
+  cardImage.src = character.characterData.imageUrl;
+  cardImage.alt = `Face of ${character.characterData.name}`;
   cardImage.width = 340;
   cardImage.height = 250;
 
@@ -23,7 +23,7 @@ const createCardImage = (
   return cardImage;
 };
 
-const createCharacterType = (character: Character): HTMLElement => {
+const createCharacterType = (character: CharacterStructure): HTMLElement => {
   const characterType = document.createElement("span");
   characterType.classList.add("character-type");
 
@@ -51,7 +51,7 @@ const createCharacterType = (character: Character): HTMLElement => {
   return characterType;
 };
 
-const createCharacterState = (character: Character): HTMLElement => {
+const createCharacterState = (character: CharacterStructure): HTMLElement => {
   const characterInfo = document.createElement("div");
   characterInfo.classList.add("character__state");
 
@@ -67,17 +67,17 @@ const createCharacterState = (character: Character): HTMLElement => {
   return characterInfo;
 };
 
-const createCardInformation = (character: Character): HTMLElement => {
+const createCardInformation = (character: CharacterStructure): HTMLElement => {
   const cardInformation = document.createElement("div");
   cardInformation.classList.add("character__content");
 
   cardInformation.innerHTML = `
-  <h2 class="character__name">${character.name} ${character.surname ? character.surname : ""}</h2> `;
+  <h2 class="character__name">${character.characterData.name} ${character.characterData.surname ? character.characterData.surname : ""}</h2> `;
 
   const characterInformation = document.createElement("div");
   characterInformation.classList.add("character__information");
 
-  characterInformation.innerHTML = `<span class="character__age">Age: ${character.age} years</span>`;
+  characterInformation.innerHTML = `<span class="character__age">Age: ${character.characterData.age} years</span>`;
 
   cardInformation.appendChild(characterInformation);
   characterInformation.appendChild(createCharacterState(character));
@@ -86,7 +86,7 @@ const createCardInformation = (character: Character): HTMLElement => {
 };
 
 const createCard = (
-  character: Character,
+  character: CharacterStructure,
   isLazyLoading?: boolean,
 ): HTMLLIElement => {
   const card = document.createElement("li");

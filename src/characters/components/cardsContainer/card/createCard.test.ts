@@ -1,5 +1,5 @@
 import createCard from ".";
-import createFighter from "../../../fighter/factory/createFighter";
+import Fighter from "../../../fighter/factory/Fighter";
 
 const screen = document.createElement("div");
 
@@ -16,12 +16,11 @@ describe("Given the card component", () => {
   };
   const skillLevel = 8;
   const weapon = "";
-  const phrase = "";
 
   describe("When it recives 'Jaime Lanniester'", () => {
     test("Then it should show the image of Jaime Lanniester", () => {
       const expectedAlternativeImageText = /Face of Jaime/i;
-      const jaime = createFighter(jaimeData, skillLevel, weapon, phrase);
+      const jaime: Fighter = new Fighter(jaimeData, weapon, skillLevel);
 
       const jaimeCard = createCard(jaime);
 
@@ -34,7 +33,8 @@ describe("Given the card component", () => {
     });
 
     test("Then it should show Jaime Lanniester in a heading", () => {
-      const jaime = createFighter(jaimeData, skillLevel, weapon, phrase);
+      const jaime: Fighter = new Fighter(jaimeData, weapon, skillLevel);
+
       const jaimeName = /jaime lanniester/i;
 
       const jaimeCard = createCard(jaime);
@@ -50,7 +50,8 @@ describe("Given the card component", () => {
 
   describe("When it recives Jaime Lanniester dead", () => {
     test("Then it should show a thumb down", () => {
-      const jaime = createFighter(jaimeData, skillLevel, weapon, phrase);
+      const jaime: Fighter = new Fighter(jaimeData, weapon, skillLevel);
+
       jaime.die();
       const jaimeCard = createCard(jaime);
 

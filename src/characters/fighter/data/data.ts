@@ -1,5 +1,4 @@
-import createFighter from "../factory/Fighter.js";
-import { type FighterStructure } from "../types";
+import Fighter from "../factory/Fighter.js";
 
 const jaimeData = {
   name: "Jaime",
@@ -9,13 +8,11 @@ const jaimeData = {
 };
 const jaimeSkillLevel = 7;
 const jaimeWeapon = "Espada";
-const fighterPhrase = "Primero pego y luego pregunto";
 
-export const jaime: FighterStructure = createFighter(
+export const jaime: Fighter = new Fighter(
   jaimeData,
-  jaimeSkillLevel,
   jaimeWeapon,
-  fighterPhrase,
+  jaimeSkillLevel,
 );
 
 const daenerysData = {
@@ -27,9 +24,8 @@ const daenerysData = {
 const daenerysSkillLevel = 9;
 const daenerysWeapon = "Espada";
 
-export const daenerys: FighterStructure = createFighter(
+export const daenerys: Fighter = new Fighter(
   daenerysData,
-  daenerysSkillLevel,
   daenerysWeapon,
-  fighterPhrase,
+  daenerysSkillLevel,
 );
