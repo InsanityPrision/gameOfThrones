@@ -1,5 +1,5 @@
 import { type CharacterData } from "../../types";
-import createFighter from "./createFighter";
+import Fighter from "./Fighter";
 
 describe("Given the createFighter function", () => {
   describe("When it's called", () => {
@@ -14,19 +14,19 @@ describe("Given the createFighter function", () => {
     const weapon = "Espada";
 
     test("Then it should return an alive fighter", () => {
-      const fighter = createFighter(characterData, skillLevel, weapon, phrase);
+      const fighter = new Fighter(characterData, weapon, skillLevel);
 
       expect(fighter.isAlive).toBeTruthy();
     });
 
     test("Then it should return a fighter who says 'Primero pego y luego pregunto'", () => {
-      const fighter = createFighter(characterData, skillLevel, weapon, phrase);
+      const fighter = new Fighter(characterData, weapon, skillLevel);
 
       expect(fighter.talk()).toEqual(phrase);
     });
 
     test("Then it should return a fighter who can die", () => {
-      const fighter = createFighter(characterData, skillLevel, weapon, phrase);
+      const fighter = new Fighter(characterData, weapon, skillLevel);
 
       fighter.die();
 
