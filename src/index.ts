@@ -1,12 +1,10 @@
-import createCardsContainer from "./characters/components/cardsContainer/index.js";
 import { characters } from "./characters/data/data.js";
-import createMainHeader from "./components/header/index.js";
+import createApp from "./components/app/createApp.js";
 
-const mainContainer = document.querySelector(".root");
+const rootContainer = document.querySelector(".root");
 
-if (!mainContainer) {
+if (!rootContainer) {
   throw new Error("Root container does not exist");
 }
 
-mainContainer.appendChild(createMainHeader());
-mainContainer.appendChild(createCardsContainer(characters));
+rootContainer.appendChild(createApp(characters));

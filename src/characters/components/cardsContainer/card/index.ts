@@ -13,8 +13,8 @@ const createCardImage = (
 
   cardImage.src = character.imageUrl;
   cardImage.alt = `Face of ${character.name}`;
-  cardImage.width = 280;
-  cardImage.height = 220;
+  cardImage.width = 340;
+  cardImage.height = 250;
 
   if (isLaizyLoading) {
     cardImage.loading = "lazy";

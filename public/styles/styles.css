@@ -29,7 +29,10 @@ ul {
 .root {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+}
+
+.main-container {
+  margin: 0 auto;
 }
 
 .main-header {
@@ -41,29 +44,22 @@ ul {
   font-weight: 600;
 }
 
-.main-container {
-  margin: 0 auto;
-  padding-top: 0;
-  padding: 5px;
-
-  @media (width >= 780) {
-    padding: 30px;
-  }
+.card-container {
+  padding: 30px;
 }
 
 .characters {
-  max-width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
 
-  @media (width >= 780px) {
+  @media (width >= 600px) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px 30px;
   }
 
-  @media (width >= 1100px) {
+  @media (width >= 880px) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px 30px;
@@ -79,6 +75,7 @@ ul {
 .character__image {
   object-fit: cover;
   object-position: top;
+  max-width: 100%;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }

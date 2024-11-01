@@ -3,7 +3,7 @@ import { createCardsList } from "./cards/index.js";
 
 const createCardsContainer = (characters: Character[]): HTMLElement => {
   const cardsContainer = document.createElement("main");
-  cardsContainer.classList.add("main-container");
+  cardsContainer.classList.add("card-container");
 
   cardsContainer.appendChild(createCardsList(characters));
 
