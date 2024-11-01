@@ -1,5 +1,5 @@
-import createKing from "../factory/createKing.js";
-import { type King } from "../types";
+import createKing from "../factory/King.js";
+import { type KingStructure } from "../types";
 
 const joffreyData = {
   name: "Joffrey",
@@ -10,6 +10,10 @@ const joffreyData = {
 const kingPhrase = "Vais a morir todos";
 const joffreyYearsOfReign = 1;
 
-const joffrey: King = createKing(joffreyData, kingPhrase, joffreyYearsOfReign);
+const joffrey: KingStructure = createKing(
+  joffreyData,
+  kingPhrase,
+  joffreyYearsOfReign,
+);
 
 export default joffrey;
