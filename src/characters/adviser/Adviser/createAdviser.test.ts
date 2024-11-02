@@ -1,4 +1,4 @@
-import { King } from "../../king/factory/King";
+import { King } from "../../king/King/King";
 import { type CharacterData } from "../../types";
 import { Adviser } from "./Adviser";
 

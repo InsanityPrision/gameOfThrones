@@ -1,4 +1,4 @@
-import { Character } from "../../factory/Character.js";
+import { Character } from "../../Character/Character.js";
 import { type CharacterData } from "../../types";
 import { type AdviserStructure } from "../types";
 
