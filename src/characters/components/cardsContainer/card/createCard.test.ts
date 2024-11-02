@@ -1,5 +1,5 @@
 import createCard from ".";
-import Fighter from "../../../fighter/factory/Fighter";
+import Fighter from "../../../fighter/Fighter/Fighter";
 
 const screen = document.createElement("div");
 
