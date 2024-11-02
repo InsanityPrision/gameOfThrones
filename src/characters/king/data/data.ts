@@ -1,4 +1,4 @@
-import { King } from "../factory/King.js";
+import { King } from "../King/King.js";
 
 const joffreyData = {
   name: "Joffrey",
