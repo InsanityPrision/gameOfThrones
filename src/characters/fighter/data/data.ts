@@ -1,4 +1,4 @@
-import Fighter from "../factory/Fighter.js";
+import Fighter from "../Fighter/Fighter.js";
 
 const jaimeData = {
   name: "Jaime",
