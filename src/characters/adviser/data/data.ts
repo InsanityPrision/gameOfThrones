@@ -1,5 +1,5 @@
 import { daenerys } from "../../fighter/data/data.js";
-import { Adviser } from "../factory/Adviser.js";
+import { Adviser } from "../Adviser/Adviser.js";
 
 const tyrionData = {
   name: "Tyrion",

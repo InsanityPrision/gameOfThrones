@@ -1,5 +1,5 @@
 import { jaime } from "../../fighter/data/data.js";
-import { Squire } from "../factory/Squire.js";
+import { Squire } from "../Squire/Squire.js";
 
 const bronnData = { name: "Bronn", age: 34, imageUrl: "images/bronn.webp" };
 const bronnBoss = jaime;
