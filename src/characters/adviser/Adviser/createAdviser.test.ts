@@ -2,7 +2,7 @@ import { King } from "../../king/King/King";
 import { type CharacterData } from "../../types";
 import { Adviser } from "./Adviser";
 
-describe("Given the createAdviser function", () => {
+describe("Given the Adviser class", () => {
   describe("When it's called", () => {
     const characterData: CharacterData = {
       name: "Arthur",

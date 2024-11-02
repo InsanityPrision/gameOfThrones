@@ -1,7 +1,7 @@
 import { type CharacterData } from "../../types";
 import Fighter from "./Fighter";
 
-describe("Given the createFighter function", () => {
+describe("Given the Fighter class", () => {
   describe("When it's called", () => {
     const characterData: CharacterData = {
       name: "Alex",

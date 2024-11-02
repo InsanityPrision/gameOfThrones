@@ -1,7 +1,7 @@
 import { jaime } from "../../fighter/data/data";
 import { Squire } from "./Squire";
 
-describe("Given the createSquire function", () => {
+describe("Given the Squire class", () => {
   describe("When it's called", () => {
     const squireData = {
       name: "Pedro",
