@@ -76,6 +76,7 @@ li {
   box-shadow: 2px 2px 2px #000;
   z-index: 1;
   position: relative;
+  transition: 1s;
 }
 
 .character:hover {
@@ -118,6 +119,7 @@ li {
 }
 
 .card-hover {
+  padding: 10px;
   border-radius: 4px;
   background-color: #0009;
   height: 100%;
@@ -129,7 +131,6 @@ li {
 
 .card-hover:hover {
   z-index: 1;
-  padding: 10px;
 }
 
 .card-hover__list {
