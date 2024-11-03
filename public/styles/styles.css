@@ -26,6 +26,10 @@ ul {
   padding: 0;
 }
 
+li {
+  position: relative;
+}
+
 .root {
   display: flex;
   flex-direction: column;
@@ -70,6 +74,12 @@ ul {
   background-color: #331c0e;
   border-radius: 4px;
   box-shadow: 2px 2px 2px #000;
+  z-index: 1;
+  position: relative;
+}
+
+.character:hover {
+  z-index: 0;
 }
 
 .character__image {
@@ -105,4 +115,18 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.card-hover {
+  border-radius: 4px;
+  background-color: #0008;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  top: 0px;
+}
+
+.card-hover:hover {
+  z-index: 1;
 }
