@@ -1,3 +1,7 @@
+import { type Adviser } from "../../../adviser/Adviser/Adviser";
+import type Fighter from "../../../fighter/Fighter/Fighter";
+import { type King } from "../../../king/King/King";
+import { type Squire } from "../../../squire/Squire/Squire";
 import { type CharacterStructure } from "../../../types";
 
 const createCardImage = (
@@ -85,9 +89,52 @@ const createCardInformation = (character: CharacterStructure): HTMLElement => {
   return cardInformation;
 };
 
-const cardHover = (): HTMLElement => {
+const cardHover = (character: CharacterStructure): HTMLElement => {
   const cardHover = document.createElement("div");
   cardHover.classList.add("card-hover");
+
+  const characterInfo = document.createElement("div");
+  characterInfo.classList.add("card-hover__information");
+
+  const king = character as King;
+  const squire = character as Squire;
+  const fighter = character as Fighter;
+  const adviser = character as Adviser;
+
+  if (king.yearsOfReign) {
+    characterInfo.innerHTML = `
+    <ul class='card-hover__list'>
+      <li>Years of reign: ${king.yearsOfReign} </li>
+    </ul>
+      `;
+  }
+
+  if (squire.toadyLevel) {
+    characterInfo.innerHTML = `
+    <ul class='card-hover__list'>
+      <li>Server to: ${squire.boss.characterData.name}  ${squire.boss.characterData.surname}</li>
+    </ul>
+    `;
+  }
+
+  if (fighter.weapon) {
+    characterInfo.innerHTML = `
+    <ul class='card-hover__list'>
+      <li>Weapon: ${fighter.weapon}</li>
+      <li>Dexterity: ${fighter.skillLevel}</li>
+    </ul>
+    `;
+  }
+
+  if (adviser.advised) {
+    characterInfo.innerHTML = `
+    <ul class='card-hover__list'>
+     <li>Advises to: ${adviser.advised.characterData.name}  ${adviser.advised.characterData.surname}</li>
+     </ul>
+    `;
+  }
+
+  cardHover.appendChild(characterInfo);
 
   return cardHover;
 };
@@ -109,7 +156,7 @@ const createCard = (
 
   card.appendChild(characterCard);
 
-  card.appendChild(cardHover());
+  card.appendChild(cardHover(character));
 
   return card;
 };
