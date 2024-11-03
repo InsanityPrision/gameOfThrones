@@ -85,6 +85,13 @@ const createCardInformation = (character: CharacterStructure): HTMLElement => {
   return cardInformation;
 };
 
+const cardHover = (): HTMLElement => {
+  const cardHover = document.createElement("div");
+  cardHover.classList.add("card-hover");
+
+  return cardHover;
+};
+
 const createCard = (
   character: CharacterStructure,
   isLazyLoading?: boolean,
@@ -101,6 +108,8 @@ const createCard = (
   characterCard.appendChild(characterInformation);
 
   card.appendChild(characterCard);
+
+  card.appendChild(cardHover());
 
   return card;
 };
