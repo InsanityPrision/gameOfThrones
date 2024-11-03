@@ -89,6 +89,15 @@ const createCardInformation = (character: CharacterStructure): HTMLElement => {
   return cardInformation;
 };
 
+const createButton = (text: string): HTMLButtonElement => {
+  const button = document.createElement("button");
+  button.classList.add("card-hover__button");
+
+  button.textContent = text;
+
+  return button;
+};
+
 const cardHover = (character: CharacterStructure): HTMLElement => {
   const cardHover = document.createElement("div");
   cardHover.classList.add("card-hover");
@@ -134,7 +143,14 @@ const cardHover = (character: CharacterStructure): HTMLElement => {
     `;
   }
 
+  const buttonContainer = document.createElement("div");
+  buttonContainer.classList.add("card-hover__buttons");
+
+  buttonContainer.appendChild(createButton("speak"));
+  buttonContainer.appendChild(createButton("die"));
+
   cardHover.appendChild(characterInfo);
+  cardHover.appendChild(buttonContainer);
 
   return cardHover;
 };
